@@ -1,51 +1,57 @@
-# LAB: Model and Database
+# lab-04
 
-Build the final pieces of your Model validation and persistence!
+## Mongoose ORM
 
-## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
+### Author: Antonella Gutierrez
 
-## Requirements
+### Links and Resources 
 
-Install `mkdirp` as a runtime dependency.
+* [submission PR](https://github.com/antonella-401-advanced-javascript/lab-05/pull/1)
+* [travis](https://travis-ci.com/antonella-401-advanced-javascript/lab-05)
 
-Updated `files`, `Database` (and tests) we did in class are in `starter-code`.
+### Documentation
+* [jsdoc](/docs/) (Server assignments)
 
-There is also the `Schema` class as a reference, but should use your own.
+### Modules
+##### Exported Values and Methods
 
-### Model Class
+##### Schema
+Design a schema and use at least one:
 
-Starter code contains a module called `model.js` that exports a `Model` class.
+1. `String`, `Number`, and `Boolean` property.
+1. complex Array property
+1. complex Object property
+1. `default` option
+1. `enum` option
+1. min or max on string or number
 
-It also contains tests for construction and create.
+##### Express Server
 
-It is optional to test, but you must implement rest of Model methods
+Create an express server with the following routes and associated model methods:
 
-### Manual Integration Testing
+method | route | model method
+---|---|---
+`GET` | `/api/things` | Model.find
+`GET` | `/api/things/:id` | Model.findById
+`POST` | `/api/things` | Model.create
+`PUT` | `/api/things/:id` | Model.findByIdAndUpdate
+`DELETE` | `/api/things/:id` | Model.findByIdAndRemove
 
-In the `models` folder, create a couple of model instances
-1. create a schemaConfig and `Model` instance from that
-1. export the created instance
+### Setup
+#### `.env` requirements
+* `PORT` - Port Number
 
-In `index.js`, see if you can exercise the model:
-1. require `Database` and connect
-1. import model instance(s)
-1. read and write using `create`, `findById`, and `find`
+#### Running the app
+* `npm start`
+* Endpoint: `/`
+    * Returns a boolean
+* Endpoint: `/docs`
+    * Returns JSDoc documentation pages
 
-## Stretch Goals
+#### Tests
+* Unit Tests: `npm test`
+* Lint Tests: `npm run lint`
 
-### Express Server
-
-Create an express server that uses `Database` and a model or two
-to expose `api` routes.
-
-### More CRUD
-
-Implement `update` and `delete`
-
-1. `Model` should have methods `updateById(id, model)` and `deleteById(id)`
-1. `DocumentCollection` should have `update(id, object)` and
-`delete(id)` methods. Refactor part of `save` to new method `write` that both `save` and `update` use.
-
-### Assignment Submission Instructions
-Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
+#### Whiteboard
+![Whiteboard Diagram](lab-04.jpg)
+![Postman Screenshot]()
