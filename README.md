@@ -53,5 +53,5 @@ method | route | model method
 * Lint Tests: `npm run lint`
 
 #### Whiteboard
-![Whiteboard Diagram](lab-04.jpg)
+![Whiteboard Diagram](whiteboard.jpg)
 ![Postman Screenshot]()
