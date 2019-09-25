@@ -1,5 +1,4 @@
 const Dog = require('../lib/dog');
-const mongoose = require('mongoose');
 
 describe('Dog model', () => {
   it('validates all schema properties', () => {
