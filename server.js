@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./lib/connect');
+require('./lib/connect')();
 const express = require('express');
 const app = express();
 const Dog = require('./lib/dog');
@@ -15,7 +15,7 @@ app.get('/api/dogs', (req, res, next) => {
     .catch(next);
 });
 
-app.get('.api/dogs/:id', (req, res, next) => {
+app.get('/api/dogs/:id', (req, res, next) => {
   Dog.findById(req.params.id)
     .then(dog => {
       res.json(dog);
@@ -31,7 +31,7 @@ app.post('/api/dogs', (req, res, next) => {
     .catch(next);
 });
 
-app.put('/api/dogs', (req, res, next) => {
+app.put('/api/dogs/:id', (req, res, next) => {
   Dog.findByIdAndUpdate(
     req.params.id,
     req.body,
