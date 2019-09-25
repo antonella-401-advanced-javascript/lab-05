@@ -54,4 +54,10 @@ method | route | model method
 
 #### Whiteboard
 ![Whiteboard Diagram](whiteboard.jpg)
-![Postman Screenshot]()
+![Postman Screenshot](PUT.png)
+![Postman Screenshot](PUT2.png)
+![Postman Screenshot](POST.png)
+![Postman Screenshot](ID.png)
+![Postman Screenshot](GET.png)
+![Postman Screenshot](DELETE.png)
+![Postman Screenshot](GETAFTERDELETION.png)
